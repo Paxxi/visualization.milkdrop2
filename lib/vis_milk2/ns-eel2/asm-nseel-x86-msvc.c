@@ -45,19 +45,21 @@ __declspec(naked) void nseel_asm_1pdd(void)
 #endif
 					    mov eax, esi; /* set return value */
 					    add esi, 8; /* advance worktab ptr */
-  	RESTORE_STACK
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+      RESTORE_STACK
+    mov DWORD PTR [eax-0x6f6f6f70],edx;
+    nop;
+    nop;
+    nop;
+    nop;
+    nop;
+    nop;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_1pdd_end(void){}
@@ -94,18 +96,13 @@ __declspec(naked) void nseel_asm_2pdd(void)
 					    mov eax, esi; /* set return value */
 					    add esi, 8; /* advance worktab ptr */
 	RESTORE_STACK
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_2pdd_end(void){}
@@ -144,18 +141,13 @@ __declspec(naked) void nseel_asm_2pdds(void)
     mov eax, edi; /* set return value */
 #endif
 RESTORE_STACK
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_2pdds_end(void){}
@@ -196,18 +188,13 @@ SAVE_STACK
 					    mov eax, esi; /* set return value */
 					    add esi, EEL_F_SIZE; /* advance worktab ptr */
 RESTORE_STACK
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_2pp_end(void) {}
@@ -245,18 +232,13 @@ SAVE_STACK
 					    mov eax, esi; /* set return value */
 					    add esi, EEL_F_SIZE; /* advance worktab ptr */
 RESTORE_STACK
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_1pp_end(void){}
@@ -271,18 +253,13 @@ __declspec(naked) void nseel_asm_exec2(void)
 {
    __asm {
       
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
     }
 }
 __declspec(naked) void nseel_asm_exec2_end(void) { }
@@ -346,18 +323,13 @@ _emit 0xFF;
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_invsqrt_end(void) {}
@@ -372,18 +344,13 @@ __declspec(naked) void nseel_asm_sin(void)
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_sin_end(void) {}
@@ -397,18 +364,13 @@ __declspec(naked) void nseel_asm_cos(void)
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_cos_end(void) {}
@@ -423,18 +385,13 @@ __declspec(naked) void nseel_asm_tan(void)
     fstp st(0);
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_tan_end(void) {}
@@ -448,18 +405,13 @@ __declspec(naked) void nseel_asm_sqr(void)
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_sqr_end(void) {}
@@ -474,18 +426,13 @@ __declspec(naked) void nseel_asm_sqrt(void)
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_sqrt_end(void) {}
@@ -502,18 +449,13 @@ __declspec(naked) void nseel_asm_log(void)
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
 
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_log_end(void) {}
@@ -529,18 +471,13 @@ __declspec(naked) void nseel_asm_log10(void)
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
 
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_log10_end(void) {}
@@ -554,18 +491,13 @@ __declspec(naked) void nseel_asm_abs(void)
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_abs_end(void) {}
@@ -591,18 +523,13 @@ label_0:
 label_1:
     
     mov qword ptr [edi], rcx;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
     }
 
 #else
@@ -626,35 +553,25 @@ label_3:
     
     mov dword ptr [edi], ecx;
     mov dword ptr [edi+4], edx;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 #else
   __asm {
     mov ecx, dword ptr [eax];
     mov dword ptr [edi], ecx;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 #endif
 
@@ -672,18 +589,13 @@ __declspec(naked) void nseel_asm_add(void)
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_add_end(void) {}
@@ -695,18 +607,13 @@ __declspec(naked) void nseel_asm_add_op(void)
     fadd EEL_ASM_TYPE [edi];
     mov eax, edi;
     fstp EEL_ASM_TYPE [edi];
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_add_op_end(void) {}
@@ -721,18 +628,13 @@ __declspec(naked) void nseel_asm_sub(void)
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_sub_end(void) {}
@@ -744,18 +646,13 @@ __declspec(naked) void nseel_asm_sub_op(void)
     fsub EEL_ASM_TYPE [eax];
     mov eax, edi;
     fstp EEL_ASM_TYPE [edi];
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_sub_op_end(void) {}
@@ -769,18 +666,13 @@ __declspec(naked) void nseel_asm_mul(void)
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_mul_end(void) {}
@@ -792,18 +684,13 @@ __declspec(naked) void nseel_asm_mul_op(void)
     fmul EEL_ASM_TYPE [edi];
     mov eax, edi;
     fstp EEL_ASM_TYPE [edi];
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_mul_op_end(void) {}
@@ -817,18 +704,13 @@ __declspec(naked) void nseel_asm_div(void)
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_div_end(void) {}
@@ -840,18 +722,13 @@ __declspec(naked) void nseel_asm_div_op(void)
     fdiv EEL_ASM_TYPE [eax];
     mov eax, edi;
     fstp EEL_ASM_TYPE [edi];
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_div_op_end(void) {}
@@ -881,18 +758,13 @@ label_4:
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_mod_end(void) {}
@@ -920,18 +792,13 @@ label_5:
     fild dword ptr [edi];
     mov eax, edi;
     fstp EEL_ASM_TYPE [edi];
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
     }
 }
 __declspec(naked) void nseel_asm_mod_op_end(void) {}
@@ -957,18 +824,13 @@ __declspec(naked) void nseel_asm_or(void)
     fild qword ptr [esi];
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_or_end(void) {}
@@ -992,18 +854,13 @@ __declspec(naked) void nseel_asm_or_op(void)
     fild qword ptr [edi];
     mov eax, edi;
     fstp EEL_ASM_TYPE [edi];
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_or_op_end(void) {}
@@ -1029,18 +886,13 @@ __declspec(naked) void nseel_asm_and(void)
     fild qword ptr [esi];
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_and_end(void) {}
@@ -1064,18 +916,13 @@ __declspec(naked) void nseel_asm_and_op(void)
     fild qword ptr [edi];
     mov eax, edi;
     fstp EEL_ASM_TYPE [edi];
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_and_op_end(void) {}
@@ -1086,18 +933,13 @@ __declspec(naked) void nseel_asm_uplus(void) // this is the same as doing nothin
 {
    __asm {
       
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
     }
 }
 __declspec(naked) void nseel_asm_uplus_end(void) {}
@@ -1121,18 +963,13 @@ __declspec(naked) void nseel_asm_uminus(void)
     mov dword ptr [esi], ecx;
     add esi, 4;
 #endif
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_uminus_end(void) {}
@@ -1203,18 +1040,13 @@ label_8:
 	
 
 #endif
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
 }
 }
 __declspec(naked) void nseel_asm_sign_end(void) {}
@@ -1260,18 +1092,13 @@ label_10:
     
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_bnot_end(void) {}
@@ -1322,18 +1149,13 @@ _emit 0xFF;
     add rsp, 8;
 #endif
 
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_if_end(void) {}
@@ -1367,18 +1189,13 @@ label_12:
     jnz label_12;
 label_11:
 
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_repeat_end(void) {}
@@ -1427,18 +1244,13 @@ _emit 0xFF;
 label_14:
 	
 	mov eax, esi;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_repeatwhile_end(void) {}
@@ -1518,18 +1330,13 @@ label_16:
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_band_end(void) {}
@@ -1608,18 +1415,13 @@ label_18:
     mov eax, esi;
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_bor_end(void) {}
@@ -1664,18 +1466,13 @@ label_20:
     
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_equal_end(void) {}
@@ -1720,18 +1517,13 @@ label_22:
     
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_notequal_end(void) {}
@@ -1756,18 +1548,13 @@ label_24:
     
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_below_end(void) {}
@@ -1791,18 +1578,13 @@ label_26:
     
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_beloweq_end(void) {}
@@ -1827,18 +1609,13 @@ label_28:
     
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_above_end(void) {}
@@ -1861,18 +1638,13 @@ label_30:
     
     fstp EEL_ASM_TYPE [esi];
     add esi, EEL_F_SIZE;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
   }
 }
 __declspec(naked) void nseel_asm_aboveeq_end(void) {}
@@ -1892,18 +1664,13 @@ __declspec(naked) void nseel_asm_min(void)
     mov eax, edi;
 label_31:
     
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
     }
 
 }
@@ -1922,18 +1689,13 @@ __declspec(naked) void nseel_asm_max(void)
     mov eax, edi;
 label_32:
     
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
     }
 }
 __declspec(naked) void nseel_asm_max_end(void) {}
@@ -1990,18 +1752,13 @@ SAVE_STACK
     add esp, 16;
 RESTORE_STACK
 #endif
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
  }
 }
 __declspec(naked) void _asm_generic3parm_end(void) {}
@@ -2053,18 +1810,13 @@ SAVE_STACK
     add esp, 16;
 RESTORE_STACK
 #endif
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
  }
 }
 __declspec(naked) void _asm_generic3parm_retd_end(void) {}
@@ -2106,18 +1858,13 @@ SAVE_STACK
     add esp, 16;
 RESTORE_STACK
 #endif
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
  }
 }
 __declspec(naked) void _asm_generic2parm_end(void) {}
@@ -2167,18 +1914,13 @@ SAVE_STACK
     add esp, 16;
 RESTORE_STACK
 #endif
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
  }
 }
 __declspec(naked) void _asm_generic2parm_retd_end(void) {}
@@ -2220,18 +1962,13 @@ SAVE_STACK
 RESTORE_STACK
 #endif
 
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
  }
 }
 __declspec(naked) void _asm_generic1parm_end(void) {}
@@ -2278,18 +2015,13 @@ SAVE_STACK
     add esp, 16;
 RESTORE_STACK
 #endif
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
  }
 }
 __declspec(naked) void _asm_generic1parm_retd_end(void) {}
@@ -2394,18 +2126,13 @@ label_35:
 
 RESTORE_STACK
 
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
  }
 }
 
@@ -2445,18 +2172,13 @@ __declspec(naked) void win64_callcode()
 		pop rbp;
 		pop rbx;
 		ret;
-_emit 0x89;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
-_emit 0x90;
+mov DWORD PTR [eax-0x6f6f6f70],edx;
+nop;
+nop;
+nop;
+nop;
+nop;
+nop;
 	}
 }
 

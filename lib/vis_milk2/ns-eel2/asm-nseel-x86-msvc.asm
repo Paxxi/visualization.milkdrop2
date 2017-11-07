@@ -267,112 +267,100 @@ nseel_asm_invsqrt_end PROC
 nseel_asm_invsqrt_end ENDP
 
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_sin PROC
-  __asm {
     fld EEL_ASM_TYPE [eax]
     fsin
     mov eax, esi
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_sin ENDP
+
 nseel_asm_sin_end PROC
 nseel_asm_sin_end ENDP
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_cos PROC
-  __asm {
     fld EEL_ASM_TYPE [eax]
     fcos
     mov eax, esi
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_cos ENDP
+
 nseel_asm_cos_end PROC
 nseel_asm_cos_end ENDP
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_tan PROC
-  __asm {
     fld EEL_ASM_TYPE [eax]
     fptan
     mov eax, esi
     fstp st(0)
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_tan ENDP
+
 nseel_asm_tan_end PROC
 nseel_asm_tan_end ENDP
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_sqr PROC
-  __asm {
 	fld EEL_ASM_TYPE [eax]
     fmul st(0), st(0)
     mov eax, esi
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_sqr ENDP
+
 nseel_asm_sqr_end PROC
 nseel_asm_sqr_end ENDP
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_sqrt PROC
-  __asm {
     fld EEL_ASM_TYPE [eax]
     fabs
     fsqrt
     mov eax, esi
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_sqrt ENDP
+
 nseel_asm_sqrt_end PROC
 nseel_asm_sqrt_end ENDP
 
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_log PROC
-  __asm {
     fldln2
     fld EEL_ASM_TYPE [eax]
     mov eax, esi
@@ -380,21 +368,19 @@ nseel_asm_log PROC
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
 
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_log ENDP
+
 nseel_asm_log_end PROC
 nseel_asm_log_end ENDP
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_log10 PROC
-  __asm {
     fldlg2
     fld EEL_ASM_TYPE [eax]
     mov eax, esi
@@ -402,44 +388,39 @@ nseel_asm_log10 PROC
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
 
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_log10 ENDP
+
 nseel_asm_log10_end PROC
 nseel_asm_log10_end ENDP
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_abs PROC
-  __asm {
     fld EEL_ASM_TYPE [eax]
     fabs
     mov eax, esi
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_abs ENDP
+
 nseel_asm_abs_end PROC
 nseel_asm_abs_end ENDP
 
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_assign PROC
 ifdef TARGET_X64
-
-  __asm {
     mov rdx, qword ptr [rax]
     mov rcx, rdx
     shr rdx, 32
@@ -454,20 +435,16 @@ label_0:
 label_1:
     
     mov qword ptr [edi], rcx
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-    }
-
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
 else
 
-
 if EEL_F_SIZE == 8
-  __asm {
     mov edx, dword ptr [eax+4]
     mov ecx, dword ptr [eax]
     and edx, 0x7ff00000
@@ -484,190 +461,173 @@ label_3:
     
     mov dword ptr [edi], ecx
     mov dword ptr [edi+4], edx
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
 else
-  __asm {
     mov ecx, dword ptr [eax]
     mov dword ptr [edi], ecx
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
 endif
 
 endif
+nseel_asm_assign ENDP
 
-}
 nseel_asm_assign_end PROC
 nseel_asm_assign_end ENDP
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_add PROC
-  __asm {
     fld EEL_ASM_TYPE [eax]
     fadd EEL_ASM_TYPE [edi]
     mov eax, esi
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_add ENDP
+
 nseel_asm_add_end PROC
 nseel_asm_add_end ENDP
 
 nseel_asm_add_op PROC
-  __asm {
     fld EEL_ASM_TYPE [eax]
     fadd EEL_ASM_TYPE [edi]
     mov eax, edi
     fstp EEL_ASM_TYPE [edi]
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_add_op ENDP
+
 nseel_asm_add_op_end PROC
 nseel_asm_add_op_end ENDP
 
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_sub PROC
-  __asm {
     fld EEL_ASM_TYPE [edi]
     fsub EEL_ASM_TYPE [eax]
     mov eax, esi
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_sub ENDP
+
 nseel_asm_sub_end PROC
 nseel_asm_sub_end ENDP
 
 nseel_asm_sub_op PROC
-  __asm {
     fld EEL_ASM_TYPE [edi]
     fsub EEL_ASM_TYPE [eax]
     mov eax, edi
     fstp EEL_ASM_TYPE [edi]
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_sub_op ENDP
+
 nseel_asm_sub_op_end PROC
 nseel_asm_sub_op_end ENDP
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_mul PROC
-  __asm {
     fld EEL_ASM_TYPE [edi]
     fmul EEL_ASM_TYPE [eax]
     mov eax, esi
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_mul ENDP
+
 nseel_asm_mul_end PROC
 nseel_asm_mul_end ENDP
 
 nseel_asm_mul_op PROC
-  __asm {
     fld EEL_ASM_TYPE [eax]
     fmul EEL_ASM_TYPE [edi]
     mov eax, edi
     fstp EEL_ASM_TYPE [edi]
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_mul_op ENDP
+
 nseel_asm_mul_op_end PROC
 nseel_asm_mul_op_end ENDP
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_div PROC
-  __asm {
     fld EEL_ASM_TYPE [edi]
     fdiv EEL_ASM_TYPE [eax]
     mov eax, esi
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_div ENDP
+
 nseel_asm_div_end PROC
 nseel_asm_div_end ENDP
 
 nseel_asm_div_op PROC
-  __asm {
     fld EEL_ASM_TYPE [edi]
     fdiv EEL_ASM_TYPE [eax]
     mov eax, edi
     fstp EEL_ASM_TYPE [edi]
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_div_op ENDP
+
 nseel_asm_div_op_end PROC
 nseel_asm_div_op_end ENDP
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_mod PROC
-  __asm {
     fld EEL_ASM_TYPE [edi]
     fld EEL_ASM_TYPE [eax]
     fabs
@@ -679,7 +639,7 @@ ifdef TARGET_X64
     sub eax, eax
 endif
     cmp dword ptr [esi], 0
-    je label_4 // skip devide, set return to 0
+    je label_4 ; skip devide, set return to 0
     mov eax, dword ptr [esi+4]
     div dword ptr [esi]
 label_4:
@@ -689,20 +649,19 @@ label_4:
     mov eax, esi
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_mod ENDP
+
 nseel_asm_mod_end PROC
 nseel_asm_mod_end ENDP
 
 nseel_asm_mod_op PROC
-  __asm {
     fld EEL_ASM_TYPE [edi]
     fld EEL_ASM_TYPE [eax]
     fabs
@@ -714,7 +673,7 @@ ifdef TARGET_X64
 endif
     xor edx, edx
     cmp dword ptr [edi], 0
-    je label_5 // skip devide, set return to 0
+    je label_5 ; skip devide, set return to 0
     mov eax, dword ptr [esi]
     div dword ptr [edi]
 label_5:
@@ -723,21 +682,19 @@ label_5:
     fild dword ptr [edi]
     mov eax, edi
     fstp EEL_ASM_TYPE [edi]
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-    }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_mod_op ENDP
+
 nseel_asm_mod_op_end PROC
 nseel_asm_mod_op_end ENDP
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_or PROC
-  __asm {
     fld EEL_ASM_TYPE [edi]
     fld EEL_ASM_TYPE [eax]
     mov eax, esi
@@ -755,20 +712,19 @@ endif
     fild qword ptr [esi]
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_or ENDP
+
 nseel_asm_or_end PROC
 nseel_asm_or_end ENDP
 
 nseel_asm_or_op PROC
-  __asm {
     fld EEL_ASM_TYPE [edi]
     fld EEL_ASM_TYPE [eax]
     fistp qword ptr [edi]
@@ -785,21 +741,19 @@ endif
     fild qword ptr [edi]
     mov eax, edi
     fstp EEL_ASM_TYPE [edi]
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_or_op ENDP
+
 nseel_asm_or_op_end PROC
 nseel_asm_or_op_end ENDP
 
-//---------------------------------------------------------------------------------------------------------------
 nseel_asm_and PROC
-  __asm {
     fld EEL_ASM_TYPE [edi]
     fld EEL_ASM_TYPE [eax]
     mov eax, esi
@@ -817,15 +771,15 @@ endif
     fild qword ptr [esi]
     fstp EEL_ASM_TYPE [esi]
     add esi, EEL_F_SIZE
-mov DWORD PTR [eax-0x6f6f6f70],edx
-nop
-nop
-nop
-nop
-nop
-nop
-  }
-}
+    mov DWORD PTR [eax-0x6f6f6f70],edx
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+nseel_asm_and ENDP
+
 nseel_asm_and_end PROC
 nseel_asm_and_end ENDP
 

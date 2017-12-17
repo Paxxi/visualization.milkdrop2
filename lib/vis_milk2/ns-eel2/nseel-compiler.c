@@ -5063,7 +5063,7 @@ static void NSEEL_VM_freevars(NSEEL_VMCTX _ctx)
 void NSEEL_VM_reset_context(NSEEL_VMCTX _ctx)
 {
 
-  return NSEEL_VM_reset_context(_ctx);
+  return NSEEL_VM_freevars(_ctx);
   //if (!_ctx)
   //  return;
 

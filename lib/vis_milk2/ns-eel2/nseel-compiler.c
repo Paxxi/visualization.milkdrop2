@@ -5062,28 +5062,30 @@ static void NSEEL_VM_freevars(NSEEL_VMCTX _ctx)
 
 void NSEEL_VM_reset_context(NSEEL_VMCTX _ctx)
 {
-  if (!_ctx)
-    return;
 
-  compileContext *ctx = (compileContext *)_ctx;
-  int x;
-  if (ctx->varTable_Names || ctx->varTable_Values)
-  {
-    for (x = 0; x < ctx->varTable_numBlocks; x++)
-    {
-      if (ctx->varTable_Names)
-        free(ctx->varTable_Names[x]);
-      if (ctx->varTable_Values)
-        free(ctx->varTable_Values[x]);
-    }
-  }
+  return NSEEL_VM_reset_context(_ctx);
+  //if (!_ctx)
+  //  return;
 
-  free(ctx->varTable_Values);
-  free(ctx->varTable_Names);
-  ctx->varTable_Values = 0;
-  ctx->varTable_Names = 0;
+  //compileContext *ctx = (compileContext *)_ctx;
+  //int x;
+  //if (ctx->varTable_Names || ctx->varTable_Values)
+  //{
+  //  for (x = 0; x < ctx->varTable_numBlocks; x++)
+  //  {
+  //    if (ctx->varTable_Names)
+  //      free(ctx->varTable_Names[x]);
+  //    if (ctx->varTable_Values)
+  //      free(ctx->varTable_Values[x]);
+  //  }
+  //}
 
-  ctx->varTable_numBlocks = 0;
+  //free(ctx->varTable_Values);
+  //free(ctx->varTable_Names);
+  //ctx->varTable_Values = 0;
+  //ctx->varTable_Names = 0;
+
+  //ctx->varTable_numBlocks = 0;
 }
 
 
